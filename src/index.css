@@ -12,6 +12,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.group:hover > div > span:first-child {
+  color: green;
+}
+
+.group:hover > div > span:first-child + .absolute {
+  opacity: 1;
+}
 
 @tailwind base;
 @tailwind components;

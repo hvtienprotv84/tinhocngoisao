@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 function Menu() {
+  const [hovered, setHovered] = useState(false);
   return (
     <div className='flex ml-[10px] mt-[-35px]'>
 
@@ -29,30 +31,32 @@ function Menu() {
             <hr className='mt-[10px]'/>
 
 
-            <div className="relative ml-[10px]">
-  <div className="font-normal cursor-pointer">
-    <div className="group flex">
-      <img
-        className="w-[40] h-[40px] p-2"
-        src="https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu1.png?v=1103"
-        alt="logo"
-      />
-      <div className="relative">
-        <span className="ml-[5px] text-[14px] mt-[10px]">
-          Linh Kiện Mới
-        </span>
-        <span className="absolute rounded-r-[5px] shadow-red-700 right-0 top-[-50px] left-[260px] bg-green-200 opacity-0 transition-opacity duration-300 cursor-pointer group-hover:opacity-100">
-          <div>
-            <span className="p-2 font-bold ml-[12px]">
-              CPU - Bộ vi xử lý
+            <div className="relative flex ml-10">
+      <div className="font-normal cursor-pointer">
+        <div className="group flex">
+          <img
+            className="w-40 h-40px p-2"
+            src="https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu1.png?v=1103"
+            alt="logo"
+          />
+          <span
+            className="ml-5 text-14px mt-10px"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            Linh Kiện Mới
+          </span>
+          <FontAwesomeIcon className='mt-18px text-8px ml-110px' icon={faChevronRight} />
+          {hovered && (
+            <span className="absolute rounded-r-5px shadow-red-700 right-0 top-[-50px] left-[260px] h-1000px w-1000px bg-green-200 opacity-100 transition-opacity duration-300 cursor-pointer">
+              <span className="p-2 font-bold ml-12px">
+                CPU - Bộ vi xử lý
+              </span>
             </span>
-          </div>
-        </span>
+          )}
+        </div>
       </div>
-      <FontAwesomeIcon className="mt-[18px] text-[8px] ml-[110px]" icon={faChevronRight} />
     </div>
-  </div>
-</div>
             
             <hr className='mt-[5px]'/>
 
