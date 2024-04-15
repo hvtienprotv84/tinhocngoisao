@@ -4,12 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Menu from './Menu';
+// import NewAccessory from './component/NewAccessory';
+import App4 from './App4';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <Menu />
+    <div className='ml-[75px] mt-[60px]'>
+    {/* <NewAccessory /> */}
+    </div>
+    <App4 />
   </React.StrictMode>
 );
 

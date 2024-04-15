@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto p-1 bg-red-400 h-[126px]">
+    <div className="container mx-auto p-1 bg-white h-[126px]">
       <div className="flex items-center mb-4">
         <img
           src='./images/logo_tinhocngoisao.webp'
