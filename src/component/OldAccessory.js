@@ -2,36 +2,34 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import NewAccessory from './component/NewAccessory';
-
-function App4() {
-    const [Hovered, setHovered] = useState(false);
-    const [Hovered2, setHovered2] = useState(false);
+function OldAccessory() {
+    const [Hovered3, setHovered3] = useState(false);
+    const [Hovered4, setHovered4] = useState(false);
     return (
         <div 
-            className={` w-[200px] duration-300 `}
-            onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            className={` w-[0px] duration-300 mt-[100px]`}
+            onMouseEnter={() => setHovered3(true)}
+            onMouseLeave={() => setHovered3(false)}
         >
         <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer  w-[250px] ml-[70px] mt-[-15px]"
         >
-        <div className='hover:bg-gray-200 flex mt-[15px] ml-[15px] '>
+        <div className='hover:bg-gray-200 flex mt-[12px] ml-[15px] '>
                     <div className="group flex">
                         <img
                             className="w-[40px] h-[40px] p-2 mt-[-8px]"
-                            src="https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu2.png?v=1103"
+                            src="//theme.hstatic.net/200000420363/1001226108/14/hinhanhmenumenu3.png?v=30"
                             alt="logo"
                         />
                         <span className="ml-[5px] text-[14px] mt-[1px] w-[120px]">
-                            Linh Kiện Mới
+                            Linh Kiện Cũ
                         </span>
                     </div>
                     <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[95px]' icon={faChevronRight} />
                 </div>
                 </div>   
         <div className=''>
-        {Hovered && (
-                <div className='w-[1108px] h-[800px] ml-[345px] shadow-gray-200 shadow-md rounded-r-[5px] mt-[-100px] bg-white '>
+        {Hovered3 && (
+                <div className='w-[1108px] h-[800px] ml-[345px] shadow-gray-200 shadow-md rounded-r-[5px] mt-[-150px] bg-white '>
                 <div className="p-2 ml-[12px] flex text-[14px]">
                         <div className='flex flex-col'>
                         <span className='font-bold pt-[10px] hover:text-orange-500 cursor-pointer'>CPU - Bộ vi xử lý</span>
@@ -47,8 +45,8 @@ function App4() {
                         <span className='hover:text-orange-500 cursor-pointer'>AMD 4000 Series</span>
                         <span className='hover:text-orange-500 cursor-pointer'>AMD 3000 Series</span>
                         <div className='flex hover:text-orange-500 cursor-pointer'
-                        onMouseEnter={() => setHovered2(true)}
-                        onMouseLeave={() => setHovered2(false)}
+                        onMouseEnter={() => setHovered4(true)}
+                        onMouseLeave={() => setHovered4(false)}
                         >
                         <span
                         >CPU Tray - No Box</span>
@@ -71,7 +69,7 @@ function App4() {
                 </div>
             )}
         </div>
-        {Hovered2 && (
+        {Hovered4 && (
                 <div className='relative bg-white w-[220px] h-[150px] z-30 ml-[500px] mt-[-140px] border border-gray-300'>
                     <div className='flex flex-col pl-[10px] pt-[10px]'>
                     <span>Intel Core i3</span>
@@ -86,4 +84,4 @@ function App4() {
     );
 }
 
-export default App4;
+export default OldAccessory;

@@ -2,31 +2,29 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import NewAccessory from './component/NewAccessory';
-
-function App4() {
+function SSD_HDD_USB() {
     const [Hovered, setHovered] = useState(false);
     const [Hovered2, setHovered2] = useState(false);
     return (
         <div 
-            className={` w-[200px] duration-300 `}
+            className={` w-[0px] duration-300 mt-[100px]`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
         <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer  w-[250px] ml-[70px] mt-[-15px]"
         >
-        <div className='hover:bg-gray-200 flex mt-[15px] ml-[15px] '>
+        <div className='hover:bg-gray-200 flex mt-[17px] ml-[15px] '>
                     <div className="group flex">
                         <img
                             className="w-[40px] h-[40px] p-2 mt-[-8px]"
-                            src="https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu2.png?v=1103"
+                            src="//theme.hstatic.net/200000420363/1001226108/14/hinhanhmenumenu4.png?v=30"
                             alt="logo"
                         />
-                        <span className="ml-[5px] text-[14px] mt-[1px] w-[120px]">
-                            Linh Kiện Mới
+                        <span className="ml-[5px] text-[14px] mt-[1px] w-[140px]">
+                            SSD - HDD - USB
                         </span>
                     </div>
-                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[95px]' icon={faChevronRight} />
+                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[75px]' icon={faChevronRight} />
                 </div>
                 </div>   
         <div className=''>
@@ -86,4 +84,4 @@ function App4() {
     );
 }
 
-export default App4;
+export default SSD_HDD_USB;

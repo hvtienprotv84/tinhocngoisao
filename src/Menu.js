@@ -14,7 +14,7 @@ function Menu() {
         />
     <span className='text-white font-bold top-[-23px] left-[40px] relative text-[14px]'> DANH MỤC SẢN PHẨM</span>
     </div>
-        <div className='bg-white w-[270px] h-[500px] rounded mt-[-15px]'>
+        <div className='bg-white w-[270px] h-[690px] rounded mt-[-15px]'>
 
             <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer hover:bg-gray-50 w-[250px] ml-[10px]">
             <div className='flex'>
@@ -27,6 +27,7 @@ function Menu() {
             
 
             <hr/>
+            <hr className='mt-[45px]'/>
             <hr className='mt-[45px]'/>
             <hr className='mt-[45px]'/>
             <hr className='mt-[45px]'/>

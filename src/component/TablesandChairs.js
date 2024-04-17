@@ -2,14 +2,12 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import NewAccessory from './component/NewAccessory';
-
 function App4() {
     const [Hovered, setHovered] = useState(false);
     const [Hovered2, setHovered2] = useState(false);
     return (
         <div 
-            className={` w-[200px] duration-300 `}
+            className={` w-[0px] duration-300 `}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
@@ -19,14 +17,14 @@ function App4() {
                     <div className="group flex">
                         <img
                             className="w-[40px] h-[40px] p-2 mt-[-8px]"
-                            src="https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu2.png?v=1103"
+                            src="//theme.hstatic.net/200000420363/1001226108/14/hinhanhmenumenu11.png?v=30"
                             alt="logo"
                         />
-                        <span className="ml-[5px] text-[14px] mt-[1px] w-[120px]">
-                            Linh Kiện Mới
+                        <span className="ml-[5px] text-[14px] mt-[1px] w-[160px]">
+                            Bàn, Ghế Gaming
                         </span>
                     </div>
-                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[95px]' icon={faChevronRight} />
+                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[55px]' icon={faChevronRight} />
                 </div>
                 </div>   
         <div className=''>
