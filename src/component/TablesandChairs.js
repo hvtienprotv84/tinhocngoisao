@@ -29,7 +29,7 @@ function App4() {
                 </div>   
         <div className=''>
         {Hovered && (
-                <div className='w-[1108px] h-[800px] ml-[345px] shadow-gray-200 shadow-md rounded-r-[5px] mt-[-100px] bg-white '>
+                <div className='w-[1108px] h-[800px] ml-[345px] shadow-gray-200 shadow-md rounded-r-[5px] mt-[-500px] bg-white '>
                 <div className="p-2 ml-[12px] flex text-[14px]">
                         <div className='flex flex-col'>
                         <span className='font-bold pt-[10px] hover:text-orange-500 cursor-pointer'>CPU - Bộ vi xử lý</span>

@@ -18,8 +18,7 @@ import HeadsetMouse from './component/HeadsetMouse';
 import NetworkEquipment from './component/NetworkEquipment';
 import AudioEquipments from './component/AudioEquipments';
 import CameraWebcam from './component/CameraWebcam';
-
-// import App4 from './App4';
+import Slider from './component/Slider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +26,9 @@ root.render(
     <App />
     <Menu />
     <div className='ml-[75px] mt-[60px]'>
+    </div>
+    <div className='absolute mt-[-120px] ml-[335px]'>
+    <Slider/>
     </div>
     <div className='absolute '>
     <NewAccessory/>
