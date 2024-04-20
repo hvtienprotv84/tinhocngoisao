@@ -19,6 +19,11 @@ import NetworkEquipment from './component/NetworkEquipment';
 import AudioEquipments from './component/AudioEquipments';
 import CameraWebcam from './component/CameraWebcam';
 import Slider from './component/Slider';
+import Clock from './component/Clock';
+import BannerBelowProduct from './component/BannerBelowProduct';
+import ProductSlider from './component/ProductSlider';
+import Icon from './component/Icon';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -69,9 +74,22 @@ root.render(
     <div className='absolute mt-[550px]'>
     <AudioEquipments/>
     </div>
-    <div className='absolute mt-[595px]'>
+    <div className='relative mt-[655px]'>
     <CameraWebcam/>
     </div>
+    <div className='absolute mt-[595px]'>
+    <Clock/>
+    </div>
+    <div className='absolute mt-[595px]'>
+    <BannerBelowProduct/>
+    </div>
+    <div className='absolute ml-[15px] mt-[290px]'>
+    <ProductSlider/>
+    </div>
+    <div className='absolute ml-[15px] mt-[2090px] '>
+    <Icon/>
+    </div>
+
   </React.StrictMode>
 );
 

@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { productsData } from './data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF ,faGoogle } from '@fortawesome/free-brands-svg-icons';
+
 import 'font-awesome/css/font-awesome.min.css';
+
 // import logoImage from './images/logo_tinhocngoisao.webp';
 import './App.css';
 
@@ -10,6 +13,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
+  const [Hovered, setHovered] = useState(false);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -90,7 +94,10 @@ function App() {
         </button>
       )}
 
-      <div className='flex ml-[1155px] mt-[-60px] text-[30px] text-neutral-500'>
+      <div className='flex ml-[1155px] mt-[-60px] text-[30px] text-neutral-500'
+       onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            >
       <i className="fa fa-user"  aria-hidden="true"></i>
       <div className='mt-[5px] ml-[10px]'>
       <div className='mt-[-30px]'>
@@ -99,13 +106,29 @@ function App() {
       <span className='font-bold text-[14px]'>Tài khoản</span>
       <div className='text-[14px] mt-[-26px] ml-[68px]'>
       <i className="fa fa-caret-down text-neutral-500 text-[5px]"  aria-hidden="true"></i>
+      {Hovered && (
+                <div className='relative bg-white w-[245px] h-[210px] z-30 ml-[-150px] mt-[0px] border border-gray-300 rounded-b-[5px]'>
+                <div className='bg-[#fdd835] w-[220px] h-[40px] ml-[12.5px] mt-[10px] flex justify-center items-center rounded-[5px] cursor-pointer'>
+                <span className='text-black'>Đăng Nhập</span>
+                </div>
+                <div className='bg-[#fdd835] w-[220px] h-[40px] ml-[12.5px] mt-[10px] flex justify-center items-center rounded-[5px] cursor-pointer'>
+                <span className='text-black'>Tạo Tài Khoản</span>
+                </div>
+                <div className='bg-[#3b5998] w-[220px] h-[40px] ml-[12.5px] mt-[10px] flex justify-center items-center rounded-[5px] cursor-pointer'>
+                <FontAwesomeIcon className='text-white mr-[10px] ml-[5px] ' icon={faFacebookF} /><p class="rotate-60 bg-white w-[1px] h-[40px] mr-2"/><span className='text-white font-bold font-arial text-[13px]'>Đăng nhập bằng Facebook</span>
+                </div>
+                <div className='bg-[#df4a32] w-[220px] h-[40px] ml-[12.5px] mt-[10px] flex justify-center items-center rounded-[5px] cursor-pointer'>
+                <FontAwesomeIcon className='text-white mr-2 ml-[-12px]' icon={faGoogle} /><p class="rotate-60 bg-white w-[1px] h-[40px] mr-2"/><span className='text-white font-bold font-arial text-[13px]'>Đăng nhập bằng Google</span>
+                </div>
+                </div>
+            )}
       </div>
+      
       </div>
       
       </div>
       </div>
       </div>
-      
     </div>
   );
 }

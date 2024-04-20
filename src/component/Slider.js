@@ -31,7 +31,7 @@ function Slider() {
         <img onClick={prevSlide} size={30} src="https://file.hstatic.net/200000420363/file/l_9f8c80f89d6b419cb5843e6cf89bfb6a.svg" alt='ab'/>
       </div>
       {/* Right Arrow */}
-      <div className="absolute top-[52%] -translate-x-0 translate-y-[-50%] right-[25px] text-2xl rounded-full p-2 text-white cursor-pointer">
+      <div className="absolute top-[310px] -translate-x-0 translate-y-[-50%] right-[25px] text-2xl rounded-full p-2 text-red-600 cursor-pointer  mr-[140px]">
         {/* <BsArrowRightShort onClick={nextSlide} size={30} /> */}
         <img onClick={nextSlide} size={30} src="https://file.hstatic.net/200000420363/file/r_33672dcc51de4a23aa4fcdcd5f5caee2.svg" alt='ab'/>
       </div>
@@ -40,7 +40,7 @@ function Slider() {
       <img className='absolute; w-[365px] h-[265px] ml-[735px] mt-[5px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_2.jpg?v=49' alt=''/>
       <img className='absolute; w-[365px] h-[180px] mt-[5px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_3.jpg?v=49' alt=''/>
       <img className='absolute; w-[365px] h-[180px] ml-[370px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_4.jpg?v=49' alt=''/>
-      <img className='absolute; w-[365px] h-[180px] ml-[740px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_5.jpg?v=49' alt=''/>
+      <img className='absolute; w-[360px] h-[180px] ml-[740px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_5.jpg?v=49' alt=''/>
       </div>
 
       <div className='flex mt-[385px] ml-[-275px]'>
@@ -48,8 +48,22 @@ function Slider() {
       <img className='absolute; w-[340px] h-[155px] ml-[7px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_home_2_master.jpg?v=49' alt=''/>
       <img className='absolute; w-[340px] h-[155px] ml-[7px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_home_3_master.jpg?v=49' alt=''/>
       <img className='absolute; w-[340px] h-[155px] ml-[7px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_home_4_master.jpg?v=49' alt=''/>
-
       </div>
+
+      <div className='  bg-[white] w-[1375px] h-[800px] rounded-[10px] ml-[-272px]'></div>
+
+      <div className=' absolute border-[5px] border-blue-500 w-[1375px] h-[1000px] rounded-[10px] ml-[-272px] mt-[-800px]'></div>
+
+      <div className='  bg-[#1789e2] w-[1375px] h-[75px] rounded-[10px] ml-[-272px] mt-[125px]'>
+      </div>
+      <span className='absolute text-xl ml-[-240px] font-bold text-white mt-[-52px] italic'>Còn lại</span>
+
+
+      <div className=' w-[1400px] h-[300px] ml-[-270px] mt-[-1000px]'>
+      <img className='rounded-[5px]' src="https://theme.hstatic.net/200000420363/1001226108/14/home_fsale_apps_banner.png?v=49" alt=''/>
+            
+      </div>
+
     </div>
   );
 }
