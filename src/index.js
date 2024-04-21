@@ -23,72 +23,106 @@ import Clock from './component/Clock';
 import BannerBelowProduct from './component/BannerBelowProduct';
 import ProductSlider from './component/ProductSlider';
 import Icon from './component/Icon';
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import CPU_14 from './component/CPU_14';
+import Tonghopkhuyenmai from './pages/Tonghopkhuyenmai';
+import Menu2 from './Menu2';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <Menu />
-    <div className='ml-[75px] mt-[60px]'>
-    </div>
-    <div className='absolute mt-[-120px] ml-[335px]'>
-    <Slider/>
-    </div>
-    <div className='absolute '>
-    <NewAccessory/>
-    </div>
-    <div className='absolute mt-[-50px]'>
-    <OldAccessory/>
-    </div>
-    <div className='absolute mt-[-10px]'>
-    <SSD_HDD_USB/>
-    </div>
-    <div className='absolute mt-[138px]'>
-    <Laptop/>
-    </div>
-    <div className='absolute mt-[182px]'>
-    <PCGaming/>
-    </div>
-    <div className='absolute mt-[228px]'>
-    <PC_VP/>
-    </div>
-    <div className='absolute mt-[275px]'>
-    <PC_DH/>
-    </div>
-    <div className='absolute mt-[320px]'>
-    <ComputerScreen/>
-    </div>
-    <div className='absolute mt-[365px]'>
-    <Accessory/>
-    </div>
-    <div className='absolute mt-[410px]'>
-    <TablesandChairs/>
-    </div>
-    <div className='absolute mt-[455px]'>
-    <HeadsetMouse/>
-    </div>
-    <div className='absolute mt-[505px]'>
-    <NetworkEquipment/>
-    </div>
-    <div className='absolute mt-[550px]'>
-    <AudioEquipments/>
-    </div>
-    <div className='relative mt-[655px]'>
-    <CameraWebcam/>
-    </div>
-    <div className='absolute mt-[595px]'>
-    <Clock/>
-    </div>
-    <div className='absolute mt-[595px]'>
-    <BannerBelowProduct/>
-    </div>
-    <div className='absolute ml-[15px] mt-[290px]'>
-    <ProductSlider/>
-    </div>
-    <div className='absolute ml-[15px] mt-[2090px] '>
-    <Icon/>
-    </div>
+    
+
+    <Router>
+      <div>
+
+        <Routes>
+
+          <Route path="/" element={
+            <>
+              <App />
+          <Menu />
+          <div className='ml-[75px] mt-[60px]'>
+          </div>
+          <div className='absolute mt-[-120px] ml-[335px]'>
+          <Slider/>
+          </div>
+          <div className='absolute '>
+          <NewAccessory/>
+          </div>
+          <div className='absolute mt-[-50px]'>
+          <OldAccessory/>
+          </div>
+          <div className='absolute mt-[-10px]'>
+          <SSD_HDD_USB/>
+          </div>
+          <div className='absolute mt-[138px]'>
+          <Laptop/>
+          </div>
+          <div className='absolute mt-[182px]'>
+          <PCGaming/>
+          </div>
+          <div className='absolute mt-[228px]'>
+          <PC_VP/>
+          </div>
+          <div className='absolute mt-[275px]'>
+          <PC_DH/>
+          </div>
+          <div className='absolute mt-[320px]'>
+          <ComputerScreen/>
+          </div>
+          <div className='absolute mt-[365px]'>
+          <Accessory/>
+          </div>
+          <div className='absolute mt-[410px]'>
+          <TablesandChairs/>
+          </div>
+          <div className='absolute mt-[455px]'>
+          <HeadsetMouse/>
+          </div>
+          <div className='absolute mt-[505px]'>
+          <NetworkEquipment/>
+          </div>
+          <div className='absolute mt-[550px]'>
+          <AudioEquipments/>
+          </div>
+          <div className='relative mt-[655px]'>
+          <CameraWebcam/>
+          </div>
+          <div className='absolute mt-[595px]'>
+          <Clock/>
+          </div>
+          <div className='absolute mt-[595px]'>
+          <BannerBelowProduct/>
+          </div>
+          <div className='absolute ml-[15px] mt-[290px]'>
+          <ProductSlider/>
+          </div>
+          <div className='absolute ml-[15px] mt-[2090px]'>
+          <Icon/>
+          </div>
+            </>
+          } />
+
+          <Route path="/about" element={
+            <div className='absolute'>
+            <Tonghopkhuyenmai />
+            </div>
+          } />
+
+          <Route path="/cpu" element={
+            <div className='absolute'>
+             <App />
+            <Menu2 />
+            <div><CPU_14 /></div>
+            <div className='ml-[10px]'><Icon/></div>
+            
+            </div>
+          } />
+
+        </Routes>
+      </div>
+    </Router>
 
   </React.StrictMode>
 );

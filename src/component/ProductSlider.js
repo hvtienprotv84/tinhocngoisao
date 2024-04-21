@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight, faCircle, faCompress, faSearchPlus, faEyeSlash, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { faCompress, faSearchPlus, faEyeSlash, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 
 function ProductSlider() {

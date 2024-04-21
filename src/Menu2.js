@@ -16,18 +16,18 @@ function Menu() {
         />
     <span className='text-white font-bold top-[-23px] left-[40px] relative text-[14px]'> DANH MỤC SẢN PHẨM</span>
     </div>
-        <div className='bg-white w-[270px] h-[690px] rounded mt-[-15px]'>
+        {/* <div className='bg-white w-[270px] h-[690px] rounded mt-[-15px]'>
 
             <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer hover:bg-[#e5e7eb] w-[250px] ml-[10px]">
-            <div className='flex'>
-            <img className='w-[40px] h-[40px] p-2 mt-[10px]' src='https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu1.png?v=1103' alt='logo'/>
+            <div className='flex'> */}
+            {/* <img className='w-[40px] h-[40px] p-2 mt-[10px]' src='https://theme.hstatic.net/200000420363/1001195159/14/hinhanhmenumenu1.png?v=1103' alt='logo'/> */}
             {/* <span className='ml-[3px] text-[14px] mt-[18px]'>
                 Tổng Hợp Khuyến Mãi
             </span> */}
-            <a href="/about" className="ml-[3px] text-[14px] mt-[18px]">
+            {/* <a href="/about" className="ml-[3px] text-[14px] mt-[18px]">
            Tổng Hợp Khuyến Mãi
-            </a>
-            </div>
+            </a> */}
+            {/* </div>
             </div>
             
 
@@ -45,7 +45,7 @@ function Menu() {
             <hr className='mt-[45px]'/>
             <hr className='mt-[45px]'/>
             <hr className='mt-[45px] pb-[2000px]'/>
-        </div>
+        </div> */}
     </div>
 
     <div className="bg-neutral-400 w-[1100px] h-[36px] rounded ml-[5px]">

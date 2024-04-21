@@ -62,7 +62,9 @@ function App4() {
                 <div className="p-2 ml-[12px] flex text-[14px]">
                         <div className='flex flex-col'>
                         <span className='font-bold hover:text-orange-500 cursor-pointer'>CPU - Bộ vi xử lý</span>
+                        <a href='/cpu'>
                         <span className='pt-[10px] hover:text-orange-500 cursor-pointer'>Intel thế hệ 14</span>
+                        </a>
                         <div className='flex flex-col'>
                         <span className='hover:text-orange-500 cursor-pointer'>Intel thế hệ 13</span>
                         <span className='hover:text-orange-500 cursor-pointer'>Intel thế hệ 12</span>
