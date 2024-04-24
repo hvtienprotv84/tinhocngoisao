@@ -13,7 +13,7 @@ function OldAccessory() {
         >
         <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer  w-[250px] ml-[70px] mt-[-15px]"
         >
-        <div className='hover:bg-gray-200 flex mt-[12px] ml-[15px] '>
+        <div className='hover:bg-gray-200 mt-[12px] ml-[15px] hidden sm:inline-flex'>
                     <div className="group flex">
                         <img
                             className="w-[40px] h-[40px] p-2 mt-[-8px]"

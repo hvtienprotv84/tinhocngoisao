@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { productsData } from './data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF ,faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 import 'font-awesome/css/font-awesome.min.css';
@@ -36,29 +36,29 @@ function App() {
   };
 
   return (
-    <div className="container mx-auto p-1 bg-white h-[126px]">
+    <div className="container mx-auto p-1 bg-white h-[55px] w-[390.4px] sm:h-[126px] sm:w-[1500px] sm:container">
       <div className="flex items-center mb-4">
         <img
-          src='./images/logo_tinhocngoisao.webp'
+          src='https://theme.hstatic.net/200000420363/1000988446/14/logo.png?v=2262'
           alt="Logo"
-          className="w-[104px] h-[60px] ml-[150px] mt-[10px]"
+          className="w-[60.76px] h-[35px] mt-[0px] sm:w-[104px] sm:h-[60px] sm:ml-[150px] sm:mt-[10px]"
           onClick={handleLogoClick}
           style={{ cursor: 'pointer' }}
         />
-        <form onSubmit={handleSearch} className='ml-[115px] mt-2'>
+        <form onSubmit={handleSearch} className='ml-[10px] sm:ml-[110px] sm:mt-2 mt-[5px]'>
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="px-4 py-2 bg-gray-200 placeholder-neutral-500 w-[650px] h-[40px] rounded mr-2 font-sans focus:outline-none "
+            className="px-[5px] py-2 bg-gray-200 placeholder-neutral-500  w-[212px] h-[35px] sm:w-[650px] sm:h-[40px] rounded mr-2 font-sans focus:outline-none "
             placeholder="Bạn tìm gì..."
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-red-600 text-white rounded ml-[-50px]"
+            className="px-4 sm:px-4 py-2 bg-red-600 text-white rounded ml-[-50px]"
           >
           <FontAwesomeIcon icon={faSearch} />
-             <span className='ml-[5px]'>Tìm kiếm</span>
+             <span className='ml-[5px] hidden sm:inline'>Tìm kiếm</span>
           </button>
         </form>
       </div>
@@ -94,16 +94,16 @@ function App() {
         </button>
       )}
 
-      <div className='flex ml-[1155px] mt-[-60px] text-[30px] text-neutral-500'
+      <div className=' ml-[1155px] mt-[-60px] text-[30px] text-neutral-500 hidden md:flex' 
        onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             >
-      <i className="fa fa-user"  aria-hidden="true"></i>
+      <i className="fa fa-user " aria-hidden="true"></i>
       <div className='mt-[5px] ml-[10px]'>
       <div className='mt-[-30px]'>
-      <span className='text-[13px]'>Đăng nhập/Đăng ký</span><br/>
+      <span className='text-[13px] hidden sm:inline'>Đăng nhập/Đăng ký</span><br/>
       <div className='mt-[-25px]'>
-      <span className='font-bold text-[14px]'>Tài khoản</span>
+      <span className='font-bold text-[14px] hidden sm:inline'>Tài khoản</span>
       <div className='text-[14px] mt-[-26px] ml-[68px]'>
       <i className="fa fa-caret-down text-neutral-500 text-[5px]"  aria-hidden="true"></i>
       {Hovered && (
@@ -129,6 +129,13 @@ function App() {
       </div>
       </div>
       </div>
+
+            <div className='flex flex-col ml-[350px] mt-[-55px]  sm:hidden'>
+            <img className='absolute w-[30px] h-[30px] mt-[5px] ml-[-45px]' src='https://file.hstatic.net/200000420363/file/cart_57531e43108d48c6ab3281bbbc813beb.png' alt=''/>
+            <FontAwesomeIcon className='relative text-[30px] text-black sm:hidden' icon={faBars} />
+            <span className='absolute text-[10px] mt-[30px]'>MENU</span>
+            </div>
+
     </div>
   );
 }

@@ -13,7 +13,7 @@ function App4() {
         >
         <div className="flex transition-transform font-normal hover:font-bold hover:text-black cursor-pointer  w-[250px] ml-[70px] mt-[-15px]"
         >
-        <div className='hover:bg-gray-200 flex mt-[15px] ml-[15px] '>
+        <div className='hover:bg-gray-200 mt-[15px] ml-[15px]  hidden sm:inline-flex'>
                     <div className="group flex">
                         <img
                             className="w-[40px] h-[40px] p-2 mt-[-8px]"
@@ -24,7 +24,7 @@ function App4() {
                             Laptop
                         </span>
                     </div>
-                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[95px]' icon={faChevronRight} />
+                    <FontAwesomeIcon className='mt-[10px] text-[8px] ml-[95px] ' icon={faChevronRight} />
                 </div>
                 </div>   
         <div className=''>

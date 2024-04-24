@@ -43,7 +43,7 @@ function ProductSlider() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className=" flex-col justify-center items-center hidden sm:inline-flex">
       <div className="flex justify-between mb-4">
         <button
           className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"

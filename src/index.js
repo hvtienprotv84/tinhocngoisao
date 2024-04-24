@@ -27,6 +27,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CPU_14 from './component/CPU_14';
 import Tonghopkhuyenmai from './pages/Tonghopkhuyenmai';
 import Menu2 from './Menu2';
+import CPU14Product1 from './pages/CPU14Product1';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -47,7 +49,7 @@ root.render(
           <div className='absolute mt-[-120px] ml-[335px]'>
           <Slider/>
           </div>
-          <div className='absolute '>
+          <div className='absolute'>
           <NewAccessory/>
           </div>
           <div className='absolute mt-[-50px]'>
@@ -104,7 +106,7 @@ root.render(
             </>
           } />
 
-          <Route path="/about" element={
+          <Route path="/tong-hop-khuyen-mai" element={
             <div className='absolute'>
             <Tonghopkhuyenmai />
             </div>
@@ -115,6 +117,16 @@ root.render(
              <App />
             <Menu2 />
             <div><CPU_14 /></div>
+            <div className='ml-[10px]'><Icon/></div>
+            
+            </div>
+          } />
+
+            <Route path="/cpu/product1" element={
+            <div className='absolute'>
+            <App />
+            <Menu2 />
+            <CPU14Product1 />
             <div className='ml-[10px]'><Icon/></div>
             
             </div>

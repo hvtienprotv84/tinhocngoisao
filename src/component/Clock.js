@@ -46,7 +46,7 @@ const Countdown = () => {
   const secondText = formattedSeconds === "01" ? "Giây" : "Giây";
 
   return (
-    <div className="flex flex-row justify-center items-center h-screen ml-[135px] mt-[220px]">
+    <div className=" flex-row justify-center items-center h-screen ml-[135px] sm:mt-[220px] hidden sm:inline-flex">
       <div className="text-[12px] ml-[50px] font-bold bg-white pl-[5px] pr-[5px] w-[40px] h-[40px] rounded-[5px] text-center">
         {formattedDays}
         <div className="font-normal pb-[2px]">{dayText}</div>
