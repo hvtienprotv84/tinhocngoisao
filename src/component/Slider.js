@@ -65,7 +65,7 @@ function Slider() {
       <span className='absolute text-xl ml-[-240px] font-bold text-white mt-[-52px] italic hidden sm:inline'>Còn lại</span>
 
 
-      <div className=' w-[1400px] h-[300px] ml-[-270px] mt-[-1000px]'>
+      <div className=' w-[1400px] h-[300px] ml-[-270px] mt-[-1005px]'>
       <img className='rounded-[5px] hidden sm:inline-block' src="https://theme.hstatic.net/200000420363/1001226108/14/home_fsale_apps_banner.png?v=49" alt=''/>
             
       </div>

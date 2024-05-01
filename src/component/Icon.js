@@ -36,13 +36,13 @@ function Icon() {
 
         </div>
 
-      <div className='sm:hidden absolute'>
-      <div className='absolute bg-white w-[180px] h-[50px] rounded-[50px] border-[2px] ml-[190px] mt-[60px] border-red-500'>
+      <div className='sm:hidden '>
+      <div className=' bg-white w-[180px] h-[50px] rounded-[50px] border-[2px] ml-[190px] mt-[1500px] border-red-500'>
     <div className='absolute ml-[70px]'>
     <img className='w-[85px] mt-[-18px] absolute ml-[-88px]' src='https://cokhidangthao.com/wp-content/uploads/2022/06/phone-icon-20200331115049.gif' alt=''/>
 
     <span className='absolute font-bold text-[18px] w-[98.4px] h-[25.71px] top-[10px] text-red-500 ml-[0px]'>1900 0243</span>
-    <div className='mt-[-280px] sm:ml-[1440px] ml-[80px]'>
+    <div className='mt-[1080px] sm:ml-[1440px] ml-[80px]'>
         <div class='absolute bg-blue-500 w-[30px] h-[30px] rounded-[50px] mt-[80px] flex items-center justify-center'>
         <img className='w-[15px] h-[15px]' src='https://file.hstatic.net/200000420363/file/icon-zalo_0c82fc90acd446779649a176bae9e737.svg' alt='' />
         </div>

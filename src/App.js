@@ -5,6 +5,7 @@ import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF ,faGoogle } from '@fortawesome/free-brands-svg-icons';
 
 import 'font-awesome/css/font-awesome.min.css';
+import Footer from './component/Footer';
 
 // import logoImage from './images/logo_tinhocngoisao.webp';
 import './App.css';
@@ -14,6 +15,11 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [Hovered, setHovered] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -51,7 +57,7 @@ function App() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="px-[5px] py-2 bg-gray-200 placeholder-neutral-500  w-[212px] h-[35px] sm:w-[650px] sm:h-[40px] rounded mr-2 font-sans focus:outline-none "
-            placeholder="Bạn tìm gì..."
+            placeholder=" Bạn tìm gì..."
           />
           <button
             type="submit"
@@ -63,21 +69,48 @@ function App() {
         </form>
       </div>
 
-      <div className="grid grid-cols-5 gap-4">
+<div className=' z-50 absolute mt-[36px] ml-[-25px] '>
+      <div className="grid grid-cols-5 gap-[21.3px] z-50 bg-[#f5f5f5]">
         {isSearching && searchResults.length > 0 ? (
+          
           searchResults.map((product) => (
-            <div key={product.id} className="bg-gray-200 p-4">
+            <div key={product.id} className="bg-white p-4 text-center justify-center items-center">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full mb-2"
+                className="w-full h-full max-w-[253.04px] max-h-[253.04px] mb-2"
               />
-              <h3 className="text-lg font-bold">{product.name}</h3>
-              <p className="text-gray-500">${product.price}</p>
+              <h3 className="text-[14px] w-[240px]">{product.name}</h3>
+              {/* <p className="text-[14px] text-[#d21212] text-center">{product.price.toLocaleString()}đ</p> */}
+              <p className="text-[14px] text-[#d21212] text-center mt-[10px]">
+              {product.price === "Liên Hệ" ? "Liên Hệ" :
+              <>
+                {product.price && `${product.price.toLocaleString()}đ`}
+                {product.oldprice && ` - ${product.oldprice.toLocaleString()}đ`}
+                {product.price_contact && `${product.price_contact.toLocaleString()}`}
+                {/* {product.price_s && `${product.price_s.toLocaleString()}`} */}
+                {product.price_s && <span className='text-[#999999]'> - <s>{product.price_s.toLocaleString()}đ</s></span>}
+
+              </>
+              }
+              </p>
             </div>
           ))
         ) : isSearching && searchResults.length === 0 ? (
-          <p>No products found.</p>
+          <div className='bg-[#f4f8fa] w-[1500px] h-[2000px]'>
+          <div className='ml-[100px]'>
+            <span>
+            <a href='/'>
+            Trang chủ
+            </a>
+            </span>
+            <span> / Tìm kiếm</span>
+          </div>
+          <p className='w-[700px] ml-[500px] mt-[50px]'>Không tìm thấy nội dung với từ khóa <span className='font-bold'>"{searchTerm}"</span> . Vui lòng tìm kiếm với từ khóa khác.</p>
+            <div className='mt-[500px]'>
+            <Footer/>
+            </div>
+         </div>
         ) : (
           <div>
             {/* <p>Welcome to the homepage!</p> */}
@@ -90,11 +123,12 @@ function App() {
           onClick={handleReset}
           className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4"
         >
-          Reset
+          Đóng
         </button>
       )}
+      </div>
 
-      <div className=' ml-[1155px] mt-[-60px] text-[30px] text-neutral-500 hidden md:flex' 
+      <div className='absolute ml-[1140px] mt-[-60px] text-[30px] text-neutral-500 hidden md:flex' 
        onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             >
@@ -130,10 +164,33 @@ function App() {
       </div>
       </div>
 
-            <div className='flex flex-col ml-[350px] mt-[-55px]  sm:hidden'>
-            <img className='absolute w-[30px] h-[30px] mt-[5px] ml-[-45px]' src='https://file.hstatic.net/200000420363/file/cart_57531e43108d48c6ab3281bbbc813beb.png' alt=''/>
-            <FontAwesomeIcon className='relative text-[30px] text-black sm:hidden' icon={faBars} />
-            <span className='absolute text-[10px] mt-[30px]'>MENU</span>
+            <div className='flex flex-col ml-[350px] mt-[-55px]'>
+
+            
+            <div href='/cart' className='flex flex-row items-center sm:ml-[1010px] mt-[-35px] sm:mt-[-5px]'>
+            <a href='/cart' >
+            <img className='absolute w-[30px] h-[30px] mt-[40px] sm:mt-[0px] ml-[-45px] sm:inline-block' src='https://file.hstatic.net/200000420363/file/cart_57531e43108d48c6ab3281bbbc813beb.png' alt=''/><span className='hidden sm:inline font-bold text-[14px] text-[#7c7575] ml-[-5px]'>Giỏ hàng</span>
+            </a>
+            </div>
+            
+
+            <FontAwesomeIcon className='relative text-[30px] mt-[35px] text-black sm:hidden' icon={faBars} />
+            <span className='absolute text-[10px] mt-[30px] sm:hidden'>MENU</span>
+
+            <div className="relative">
+        <span
+          className={`absolute text-[10px] mt-[30px] sm:hidden ${menuOpen ? 'bg-red-500' : ''}`}
+          onClick={toggleMenu}
+        >
+          MENU
+        </span>
+      </div>
+      {menuOpen && (
+        <div className="bg-red-500 w-50 h-50 flex items-center justify-center">
+          <span className="text-white text-lg">XIN CHÀO</span>
+        </div>
+      )}
+
             </div>
 
     </div>

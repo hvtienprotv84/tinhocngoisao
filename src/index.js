@@ -28,6 +28,11 @@ import CPU_14 from './component/CPU_14';
 import Tonghopkhuyenmai from './pages/Tonghopkhuyenmai';
 import Menu2 from './Menu2';
 import CPU14Product1 from './pages/CPU14Product1';
+import ProductMobile from './component/Product_Mobile';
+import Footer from './component/Footer';
+import Cart from './pages/Cart';
+import FooterMobile from './component/Footer_Mobile';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -100,8 +105,14 @@ root.render(
           <div className='absolute ml-[15px] mt-[290px]'>
           <ProductSlider/>
           </div>
-          <div className='absolute ml-[15px] mt-[2090px]'>
+          {/* <div className='fixed ml-[15px] mt-[2090px]'>
           <Icon/>
+          </div> */}
+          <div className='absolute mt-[290px] sm:hidden'>
+          <ProductMobile/>
+          </div>
+          <div className='absolute mt-[1100px] sm:hidden'>
+          <FooterMobile/>
           </div>
             </>
           } />
@@ -109,6 +120,17 @@ root.render(
           <Route path="/tong-hop-khuyen-mai" element={
             <div className='absolute'>
             <Tonghopkhuyenmai />
+            </div>
+          } />
+
+          <Route path="/cart" element={
+            <div>
+            <App />
+            <Menu2/>
+            <Cart/>
+            <div className='ml-[-25px] mt-[290px]'>
+            <Footer/>
+            </div>
             </div>
           } />
 
