@@ -3,6 +3,7 @@ import { productsData } from './data';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faFacebookF ,faGoogle } from '@fortawesome/free-brands-svg-icons';
+import MenuMobileFull from './component/Menu_Mobile_Full';
 
 import 'font-awesome/css/font-awesome.min.css';
 import Footer from './component/Footer';
@@ -15,10 +16,13 @@ function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const [Hovered, setHovered] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [showMusic, setShowMusic] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const handleDivClick = () => {
+    setShowMusic(true);
+  };
+  const handleBackgroundClick = () => {
+    setShowMusic(false);
   };
 
   const handleSearch = (e) => {
@@ -47,16 +51,15 @@ function App() {
         <img
           src='https://theme.hstatic.net/200000420363/1000988446/14/logo.png?v=2262'
           alt="Logo"
-          className="w-[60.76px] h-[35px] mt-[0px] sm:w-[104px] sm:h-[60px] sm:ml-[150px] sm:mt-[10px]"
+          className="w-[60.76px] h-[35px] mt-[0px] sm:w-[104px] sm:h-[60px] sm:ml-[150px] sm:mt-[10px] cursor-pointer"
           onClick={handleLogoClick}
-          style={{ cursor: 'pointer' }}
         />
         <form onSubmit={handleSearch} className='ml-[10px] sm:ml-[110px] sm:mt-2 mt-[5px]'>
           <input
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="px-[5px] py-2 bg-gray-200 placeholder-neutral-500  w-[212px] h-[35px] sm:w-[650px] sm:h-[40px] rounded mr-2 font-sans focus:outline-none "
+            className="px-[10px] py-2 bg-gray-200 placeholder-neutral-500  w-[212px] h-[35px] sm:w-[650px] sm:h-[40px] rounded mr-2 font-sans focus:outline-none "
             placeholder=" Bạn tìm gì..."
           />
           <button
@@ -167,29 +170,31 @@ function App() {
             <div className='flex flex-col ml-[350px] mt-[-55px]'>
 
             
-            <div href='/cart' className='flex flex-row items-center sm:ml-[1010px] mt-[-35px] sm:mt-[-5px]'>
+            <div className='flex flex-row items-center sm:ml-[1010px] mt-[-35px] sm:mt-[-5px]'>
             <a href='/cart' >
             <img className='absolute w-[30px] h-[30px] mt-[40px] sm:mt-[0px] ml-[-45px] sm:inline-block' src='https://file.hstatic.net/200000420363/file/cart_57531e43108d48c6ab3281bbbc813beb.png' alt=''/><span className='hidden sm:inline font-bold text-[14px] text-[#7c7575] ml-[-5px]'>Giỏ hàng</span>
             </a>
             </div>
             
 
-            <FontAwesomeIcon className='relative text-[30px] mt-[35px] text-black sm:hidden' icon={faBars} />
-            <span className='absolute text-[10px] mt-[30px] sm:hidden'>MENU</span>
-
-            <div className="relative">
-        <span
-          className={`absolute text-[10px] mt-[30px] sm:hidden ${menuOpen ? 'bg-red-500' : ''}`}
-          onClick={toggleMenu}
-        >
-          MENU
-        </span>
+            {/* <FontAwesomeIcon className='relative text-[30px] mt-[35px] text-black sm:hidden' icon={faBars} />
+            <span className='absolute text-[10px] mt-[30px] sm:hidden'>MENU</span> */}
+      <div className="z-50 flex flex-col" onClick={handleDivClick}>
+        <FontAwesomeIcon className="relative text-[30px] mt-[35px] text-black sm:hidden" icon={faBars} 
+          onClick={handleDivClick}
+        />
+        <span className="absolute text-[10px] mt-[62px]  sm:hidden"
+        onClick={handleDivClick}
+        >MENU</span>
       </div>
-      {menuOpen && (
-        <div className="bg-red-500 w-50 h-50 flex items-center justify-center">
-          <span className="text-white text-lg">XIN CHÀO</span>
-        </div>
-      )}
+      <div>
+        {showMusic && (
+          <div className='z-50 absolute ml-[-354px] mt-[-40px] sm:hidden bg-white w-[350px] h-[3250px]'>
+          <MenuMobileFull />
+          </div>
+        )}
+      </div>
+
 
             </div>
 

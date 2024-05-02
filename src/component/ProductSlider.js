@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCompress, faSearchPlus, faEyeSlash, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon, } from '@fortawesome/react-fontawesome';
+import { faCompress, faSearchPlus, faEyeSlash, faShoppingCart, faChevronRight  } from '@fortawesome/free-solid-svg-icons';
 
 
 function ProductSlider() {
@@ -46,16 +46,20 @@ function ProductSlider() {
     <div className=" flex-col justify-center items-center hidden sm:inline-flex">
       <div className="flex justify-between mb-4">
         <button
-          className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+          className="border-[1px] border-red-500 hover:bg-red-500 hover:text-white text-red-500 pt-[15px] pb-[15px] absolute left-[30px] top-[400px] z-50 font-bold py-2 px-2"
           onClick={handlePrev}
         >
-          Prev
+          {/* Prev */}
+          <FontAwesomeIcon className='rotate-180 text-[25px]' icon={faChevronRight} />
+
         </button>
         <button
-          className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+          className="border-[1px] border-red-500 hover:bg-red-500 hover:text-white text-red-500 pt-[15px] pb-[15px] absolute left-[1440px] top-[400px] z-50 font-bold py-2 px-2"
           onClick={handleNext}
         >
-          Next
+          {/* Next */}
+          <FontAwesomeIcon className='text-[25px]' icon={faChevronRight} />
+
         </button>
       </div>
       <div className="flex flex-wrap justify-center">
@@ -76,26 +80,26 @@ function ProductSlider() {
                   <p className="text-[14px] font-arial text-red-600 ">{product.price}</p><span className="text-[14px] font-arial italic pl-[10px]"> <s>{product.priceold}</s></span>
                 </div>
                 {hoveredProduct === product.id && (
-  <div className="flex justify-center absolute bottom-0 left-0 w-full ">
-    <div className="w-full flex flex-col justify-center mt-[-450px] ml-[200px]">
-      <div className="mr-2 cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center">
-        <FontAwesomeIcon  className='flex justify-center text-white' icon={faCompress}/>
-      </div>
-      <div className="mr-2 cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
-        <FontAwesomeIcon className='text-white' icon={faSearchPlus} />
-      </div>
-      <div className="cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
-        <FontAwesomeIcon className='text-white' icon={faEyeSlash} />
-      </div>
-      <div className="cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
-        <FontAwesomeIcon className='text-white' icon={faShoppingCart} />
-      </div>
-      {/* <div className="cursor-pointer">
-        <FontAwesomeIcon icon={faDownLeftAndUpRightToCenter} style={{ color: "red" }} />
-      </div> */}
-    </div>
-  </div>
-)}
+              <div className="flex justify-center absolute bottom-0 left-0 w-full ">
+                <div className="w-full flex flex-col justify-center mt-[-450px] ml-[200px]">
+                  <div className="mr-2 cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center">
+                    <FontAwesomeIcon  className='flex justify-center text-white' icon={faCompress}/>
+                  </div>
+                  <div className="mr-2 cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
+                    <FontAwesomeIcon className='text-white' icon={faSearchPlus} />
+                  </div>
+                  <div className="cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
+                    <FontAwesomeIcon className='text-white' icon={faEyeSlash} />
+                  </div>
+                  <div className="cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center mt-[5px]">
+                    <FontAwesomeIcon className='text-white' icon={faShoppingCart} />
+                  </div>
+                  {/* <div className="cursor-pointer">
+                    <FontAwesomeIcon icon={faDownLeftAndUpRightToCenter} style={{ color: "red" }} />
+                  </div> */}
+                </div>
+              </div>
+              )}
 
               </div>
             </div>

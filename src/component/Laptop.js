@@ -1,8 +1,7 @@
-// App2.js
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-function App4() {
+function Laptop() {
     const [Hovered, setHovered] = useState(false);
     const [Hovered2, setHovered2] = useState(false);
     return (
@@ -84,4 +83,4 @@ function App4() {
     );
 }
 
-export default App4;
+export default Laptop;

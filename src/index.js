@@ -102,18 +102,21 @@ root.render(
           <div className='absolute mt-[595px]'>
           <BannerBelowProduct/>
           </div>
-          <div className='absolute ml-[15px] mt-[290px]'>
+          <div className='absolute ml-[15px] mt-[320px]'>
           <ProductSlider/>
           </div>
-          {/* <div className='fixed ml-[15px] mt-[2090px]'>
+          <div className='fixed z-50 ml-[15px] mt-[2090px] hidden sm:inline-block'>
           <Icon/>
-          </div> */}
+          </div>
           <div className='absolute mt-[290px] sm:hidden'>
           <ProductMobile/>
           </div>
           <div className='absolute mt-[1100px] sm:hidden'>
           <FooterMobile/>
           </div>
+          <div className='absolute mt-[1400px] hidden sm:inline-block'>
+            <Footer/>
+            </div>
             </>
           } />
 
