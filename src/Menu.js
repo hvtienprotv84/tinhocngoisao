@@ -8,7 +8,7 @@ function Menu() {
 
     <div className="bg-neutral-600 w-[270px] h-[35px] rounded ml-[65px] hidden sm:inline-block ">
     {/* <FontAwesomeIcon className='text-white ml-[45px] mt-[7px]' icon={faBars} /> */}
-    <div className='ml-[35px] mt-[6px] hidden sm:inline-block'>
+    <div className='ml-[35px] mt-[2px] hidden sm:inline-block'>
     <img
           src='https://www.barberemerson.com/images/fa_bars.png'
           alt="Logo"

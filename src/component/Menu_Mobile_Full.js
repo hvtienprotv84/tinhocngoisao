@@ -20,26 +20,27 @@ import MenuMobileCameraWebcam from './Menu_Mobile_CameraWebcam';
 
 function Menu_Mobile_Full() {
     return (
-        <div>
-            <MenuMobile/>
-            <MenuMobile2/>
-            <MenuMobile3/>
-            <MenuMobileNewAccessory/>
-            <MenuMobileOldAccessory/>
-            <MenuMobileSSDHDDUSB/>
-            <MenuMobileLaptop/>
-            <MenuMobileGaming/>
-            <MenuMobilePCVP/>
-            <MenuMobilePCDH/>
-            <MenuMobileComputerScreen/>
-            <MenuMobileAccessory/>
-            <MenuMobileTablesandChairs/>
-            <MenuMobileHeadsetMouse/>
-            <MenuMobileNetworkEquipment/>
-            <MenuMobileAudioEquipments/>
-            <MenuMobileCameraWebcam/>
-
-        </div>
+        <div className="max-h-[900px] overflow-y-auto">
+      <div className="pt-10">
+        <MenuMobile />
+        <MenuMobile2 />
+        <MenuMobile3 />
+        <MenuMobileNewAccessory />
+        <MenuMobileOldAccessory />
+        <MenuMobileSSDHDDUSB />
+        <MenuMobileLaptop />
+        <MenuMobileGaming />
+        <MenuMobilePCVP />
+        <MenuMobilePCDH />
+        <MenuMobileComputerScreen />
+        <MenuMobileAccessory />
+        <MenuMobileTablesandChairs />
+        <MenuMobileHeadsetMouse />
+        <MenuMobileNetworkEquipment />
+        <MenuMobileAudioEquipments />
+        <MenuMobileCameraWebcam />
+      </div>
+    </div>
 
     );
 }

@@ -74,11 +74,13 @@ function ProductSlider() {
               onMouseLeave={handleMouseLeave}
             >
               <div className=' hover:shadow-lg hover:shadow-red-500 max-h-[450px] relative'>
+              <a href={`/product${product.id}`}>
                 <img src={product.image} alt={product.name} className="w-full h-full max-w-[226.66px] max-h-[280px] object-cover pt-[35px] pb-[20px]" />
                 <h2 className="text-[14px] text-center font-arial w-[227px] h-[50px]">{product.name}</h2>
                 <div className='flex justify-center h-[50px]'>
                   <p className="text-[14px] font-arial text-red-600 ">{product.price}</p><span className="text-[14px] font-arial italic pl-[10px]"> <s>{product.priceold}</s></span>
                 </div>
+                </a>
                 {hoveredProduct === product.id && (
               <div className="flex justify-center absolute bottom-0 left-0 w-full ">
                 <div className="w-full flex flex-col justify-center mt-[-450px] ml-[200px]">

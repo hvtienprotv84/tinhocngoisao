@@ -12,6 +12,7 @@ function Menu_Mobile_2(){
 
     return(
     <div>
+                <hr className='bg-[#ccc] mt-[5px]'/>
             <div className='flex flex-row items-center mt-[10px] mb-[10px] ml-[20px]'>
                 <FontAwesomeIcon className='text-[20px]' icon={faWrench}/>
                 <span className='ml-[20px]' >Lắp đặt phòng net</span>

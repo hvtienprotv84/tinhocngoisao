@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faPlay } from '@fortawesome/free-solid-svg-icons';
 function CPU14Product1() {
   const contentData = {
     Hello: (
@@ -148,13 +148,31 @@ function CPU14Product1() {
 
 <span className='text-[#ff0000] font-bold mt-[40px]'>🛒 Xem thêm các sản phẩm CPU - Bộ vi xử lý<span className='text-[#518ac8]'> tại đây</span></span>
 
-<div className='flex justify-center items-center mt-[40px] mb-[500px]'>
+<div className='flex flex-col justify-center items-center mt-[40px] mb-[500px]'>
       <button
-        className="border-[#2f80ed] border-[1px] text-[#2f80ed] w-[340px] px-4 py-2 rounded-md mt-4 text-[14px]"
+        className="border-[#2f80ed] border-[1px] text-[#2f80ed] hover:text-[#d21212] w-[340px] px-4 py-2 rounded-md mt-4 text-[14px] flex justify-center items-center"
         onClick={handleViewDetails}
       >
         Xem thêm cấu hình chi tiết
+        <FontAwesomeIcon className='text-[10px] ml-[10px]' icon={faPlay} />
       </button>
+        <div className='flex flex-row mt-[20px]'>
+          <div className='bg-[#E02027] w-[700px] h-[50px] rounded-[5px] flex justify-center items-center text-center'>
+          <span className='text-[15px] text-[#FFFFFF]'>MUA NGAY</span>
+          </div>
+        </div>
+        <div className='flex flex-row mt-[10px]'>
+            <div className='bg-[#0991E0] w-[345px] h-[46.56px] rounded-[5px] flex justify-center items-center text-center '>
+            <span className='text-[13px] text-[#FFFFFF]'>THÊM VÀO GIỎ HÀNG</span>
+            </div>
+            <div className='bg-[#0991E0] w-[345px] h-[46.56px] rounded-[5px] flex flex-col justify-center items-center text-center ml-[10px]'>
+            <p className='text-[13px] text-[#FFFFFF]'>TRẢ GÓP 0% QUA THẺ</p>
+            <p className='text-[12px] text-[#FFFFFF]'>Visa, Mastercard, JCB, Amex</p>
+            </div>
+            </div>
+            <div className='flex flex-col mt-[5px]'>
+              <span>Gọi đặt mua<span className='text-[#2f80ed] text-[14px]'> 1900 0243</span> (8:30 - 21:00)</span>
+              </div>
       </div>
       {showDetails && (
         <div className="fixed inset-0 z-10 bg-white border-[#e0e0e0] border-[1px] flex justify-center items-center w-[1520px] h-[55px]">
@@ -202,7 +220,7 @@ function CPU14Product1() {
           </div>
         </div>
       )}
-
+      
       </div>
         </div>
 

@@ -126,7 +126,7 @@ root.render(
             </div>
           } />
 
-          <Route path="/cart" element={
+          <Route path="/product1" element={
             <div>
             <App />
             <Menu2/>

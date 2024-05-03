@@ -189,8 +189,11 @@ function App() {
       </div>
       <div>
         {showMusic && (
+          <div>
+          <div className='z-50 bg-[#575757b8] w-[50px] h-[3250px] mt-[-40px] ml-[-10px] absolute sm:hidden' onClick={handleBackgroundClick}></div>
           <div className='z-50 absolute ml-[-354px] mt-[-40px] sm:hidden bg-white w-[350px] h-[3250px]'>
           <MenuMobileFull />
+          </div>
           </div>
         )}
       </div>
