@@ -39,8 +39,8 @@ function Slider() {
       <img className='absolute; w-[365px] ml-[735px] mt-[-500px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_1.jpg?v=49' alt=''/>
       <img className='absolute; w-[365px] h-[265px] ml-[735px] mt-[5px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_2.jpg?v=49' alt=''/>
       <img className='absolute; w-[365px] h-[180px] mt-[5px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_3.jpg?v=49' alt=''/>
-      <img className='absolute; w-[365px] h-[180px] ml-[370px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_4.jpg?v=49' alt=''/>
-      <img className='absolute; w-[360px] h-[180px] ml-[740px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_5.jpg?v=49' alt=''/>
+      <img className='absolute; w-[360px] h-[180px] ml-[370px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_4.jpg?v=49' alt=''/>
+      <img className='absolute; w-[365px] h-[180px] ml-[735px] mt-[-180px]' src='https://theme.hstatic.net/200000420363/1001226108/14/banner_right_5.jpg?v=49' alt=''/>
       </div>
 
       <div className=' mt-[385px] ml-[-275px] hidden sm:inline-flex'>

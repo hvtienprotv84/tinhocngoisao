@@ -32,6 +32,7 @@ import ProductMobile from './component/Product_Mobile';
 import Footer from './component/Footer';
 import Cart from './pages/Cart';
 import FooterMobile from './component/Footer_Mobile';
+import ProductTest from './component/ProductTest';
 
 
 
@@ -115,6 +116,9 @@ root.render(
           <FooterMobile/>
           </div>
           <div className='absolute mt-[1400px] hidden sm:inline-block'>
+            <ProductTest/>
+            </div>
+          <div className='absolute mt-[2500px] hidden sm:inline-block'>
             <Footer/>
             </div>
             </>

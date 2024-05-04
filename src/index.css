@@ -20,6 +20,7 @@ code {
   opacity: 1;
 }
 
+@import 'animate.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
