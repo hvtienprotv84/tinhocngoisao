@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { faFacebookF ,faYoutube, faFacebookMessenger } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 function Icon() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 300) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <div className='fixed top-[640px]'>
@@ -25,9 +45,18 @@ function Icon() {
         <FontAwesomeIcon className='text-white ' icon={faYoutube} />
         </div>
         
-        <div class='bg-[#ed1b24] w-[30px] h-[30px] rounded-[50px] mt-[50px] flex items-center justify-center'>
+        {/* <div class='bg-[#ed1b24] w-[30px] h-[30px] rounded-[50px] mt-[50px] flex items-center justify-center'>
         <FontAwesomeIcon className='text-white ' icon={faArrowUp} />
-        </div>
+        </div> */}
+
+        <div
+      className={` bg-[#ed1b24] w-[30px] h-[30px] rounded-[50px] mt-[50px] flex items-center justify-center cursor-pointer transition-opacity ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+      onClick={scrollToTop}
+    >
+      <FontAwesomeIcon className='text-white' icon={faArrowUp} size='lg' />
+    </div>
 
         <div class='bg-[#0A7CFF] w-[60px] h-[60px] rounded-[50px] mt-[20px] ml-[-20px] flex items-center justify-center'>
         <FontAwesomeIcon className='text-white text-[36px] ' icon={faFacebookMessenger} />

@@ -113,8 +113,11 @@ function Footer() {
               <FontAwesomeIcon className='text-black absolute mt-[2px]' icon={faClock} /> <span className='ml-[20px] w-[300px] text-[14px]'>Thứ 2 - Chủ nhật, 07:30 - 20:00</span>
               </div>
           </div>
+          <div className='absolute bg-white w-[1518px] h-[80px]'>
 
-<div className='flex flex-row pl-[100px]'>
+          </div>
+
+<div className='flex flex-row pl-[100px] bg-[#f4f8fa]'>
           <div className='mt-[130px] flex flex-row'>
           <div>
             <img className='w-[30px]' src='https://theme.hstatic.net/200000420363/1001226108/14/icon_policy_page_1.png?v=66' alt=''/>
@@ -157,7 +160,7 @@ function Footer() {
 
 </div>
 
-<div className='flex flex-row'>
+<div className='flex flex-row bg-[#f4f8fa]'>
 <div className='pb-[180px] flex flex-col mt-[40px] ml-[100px]'>
   <span className='font-bold text-[16px]'>GIỚI THIỆU THNS</span>
   <span className='border-[2px] border-red-500 w-[100px]'></span>

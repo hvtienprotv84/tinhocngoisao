@@ -20,13 +20,12 @@ function Menu() {
   return (
 
     
-    <div className='flex ml-[10px] mt-[-35px]'
-    onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            >
+    <div className='flex ml-[10px] mt-[-35px]'>
 
     <div className="bg-neutral-600 w-[270px] h-[35px] rounded ml-[65px]"
-        >
+        onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            >
     {/* <FontAwesomeIcon className='text-white ml-[45px] mt-[7px]' icon={faBars} /> */}
     <div className='ml-[35px] mt-[8px]'>
     <img
