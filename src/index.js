@@ -100,7 +100,7 @@ root.render(
           <div className='relative mt-[655px]'>
           <CameraWebcam/>
           </div>
-          <div className='absolute mt-[595px]'>
+          <div className='absolute mt-[605px]'>
           <Clock/>
           </div>
           <div className='absolute mt-[595px]'>

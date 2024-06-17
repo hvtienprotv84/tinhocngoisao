@@ -100,16 +100,16 @@ function App() {
         </form>
       </div>
 
-<div className=' z-50 absolute mt-[36px] ml-[-25px] '>
-      <div className="grid grid-cols-5 gap-[21.3px] z-50 bg-[#f5f5f5]">
+<div className=' absolute mt-[36px] ml-[60px] z-[9999]'>
+      <div className="grid grid-cols-5 z-50 bg-[#f5f5f5]">
         {isSearching && searchResults.length > 0 ? (
           
           searchResults.map((product) => (
-            <div key={product.id} className="bg-white p-4 text-center justify-center items-center">
+            <div key={product.id} className="bg-white p-3 text-center justify-center items-center border-[1px] border-[#9797977a]">
               <img
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full max-w-[253.04px] max-h-[253.04px] mb-2"
+                className="w-full h-full max-w-[250px] max-h-[250px] mb-2"
               />
               <h3 className="text-[14px] w-[240px]">{product.name}</h3>
               {/* <p className="text-[14px] text-[#d21212] text-center">{product.price.toLocaleString()}đ</p> */}
@@ -128,17 +128,17 @@ function App() {
             </div>
           ))
         ) : isSearching && searchResults.length === 0 ? (
-          <div className='bg-[#f4f8fa] w-[1500px] h-[2000px]'>
-          <div className='ml-[100px]'>
+          <div className='bg-[#f4f8fa] w-[1500px] h-[2000px] text-[14px]'>
+          <div className='ml-[20px] mt-[5px]'>
             <span>
             <a href='/'>
             Trang chủ
             </a>
             </span>
-            <span> / Tìm kiếm</span>
+            <span className='text-[#777777]'> / Tìm kiếm</span>
           </div>
-          <p className='w-[700px] ml-[500px] mt-[50px]'>Không tìm thấy nội dung với từ khóa <span className='font-bold'>"{searchTerm}"</span> . Vui lòng tìm kiếm với từ khóa khác.</p>
-            <div className='mt-[500px]'>
+          <p className='w-[700px] ml-[500px] mt-[20px]'>Không tìm thấy nội dung với từ khóa <span className='font-bold'>"{searchTerm}"</span> . Vui lòng tìm kiếm với từ khóa khác.</p>
+            <div className='mt-[50px] ml-[-70px]'>
             <Footer/>
             </div>
          </div>
@@ -149,14 +149,15 @@ function App() {
         )}
       </div>
 
-      {isSearching && (
+      {/* {isSearching && (
         <button
           onClick={handleReset}
           className="px-4 py-2 bg-blue-500 text-white rounded-md mt-4"
         >
           Đóng
         </button>
-      )}
+      )} */}
+
       </div>
 
       <div className='absolute ml-[1140px] mt-[-60px] text-[30px] text-neutral-500 hidden md:flex' 
@@ -202,16 +203,16 @@ function App() {
             <div className='flex flex-col ml-[350px] mt-[-55px]'>
 
             
-            {/* <div className='flex flex-row items-center sm:ml-[1010px] mt-[-35px] sm:mt-[-5px]'>
+            <div className='flex flex-row items-center sm:ml-[1010px] mt-[-35px] sm:mt-[-5px] sm:hidden'>
             <a href='/cart' >
             <img className='absolute w-[30px] h-[30px] mt-[40px] sm:mt-[0px] ml-[-45px] sm:inline-block' src='https://file.hstatic.net/200000420363/file/cart_57531e43108d48c6ab3281bbbc813beb.png' alt=''/><span className='hidden sm:inline font-bold text-[14px] text-[#7c7575] ml-[-5px]'>Giỏ hàng</span>
             </a>
-            </div> */}
+            </div>
             
 
             {/* <FontAwesomeIcon className='relative text-[30px] mt-[35px] text-black sm:hidden' icon={faBars} />
             <span className='absolute text-[10px] mt-[30px] sm:hidden'>MENU</span> */}
-      <div className="z-50 flex flex-col" onClick={handleDivClick}>
+      <div className="z-50 flex flex-col " onClick={handleDivClick}>
         <FontAwesomeIcon className="relative text-[30px] mt-[35px] text-black sm:hidden" icon={faBars} 
           onClick={handleDivClick}
         />

@@ -137,9 +137,9 @@ function App() {
     setCartItems(updatedCartItems);
   };
 
-  const clearCart = () => {
-    setCartItems([]);
-  };
+  // const clearCart = () => {
+  //   setCartItems([]);
+  // };
 
   const showInfo = () => {
     setShowProductInfo(true);
@@ -226,10 +226,10 @@ function App() {
               />
               <h4 className='text-[14px]'>{product.name}</h4>
               {/* <p>{product.description}</p> */}
-              <div className='flex flex-row justify-center'>
+              <div className='flex flex-row justify-center items-center'>
               {/* <p className='text-[14px] text-[#d21212]'>{product.price}</p> */}
               <p className='text-[14px] text-[#d21212] mt-[10px] mb-[10px]'>
-              {product.price.toLocaleString("vi-VN", { style: "decimal" }).replace(/₫$/, '')}đ
+              {product.price.toLocaleString("vi-VN", { maximumFractionDigits: 0, useGrouping: true }).replace(/\./g, ',')}đ
               </p>
               <s className='text-[13px] text-[#999999] italic ml-[10px]'>{product.priceold}</s>
               </div>
@@ -315,14 +315,19 @@ function App() {
           <div className=' absolute ml-[-100px]'>
           <Menu2/>
           </div>
-        <div className="mt-[-2330px] h-[3200px] z-[9999] p-4 bg-red-200 ml-[-100px]">
+        <div className="mt-[-2330px] h-[3200px] p-4 bg-white ml-[-100px]">
           <h2 className="text-[24px] text-[#333333] font-normal ml-[60px] font-sans">GIỎ HÀNG</h2>
           {cartItems.length > 0 ? (
             
             <div>
             
             <div className='ml-[992.5px] text-[14px] flex flex-row mt-[15px] absolute'>
-              <p className='flex flex-row justify-start items-start'>Tổng<span className='text-[24px] ml-[330px] mt-[-8px] max-w-[145.79px] absolute'>{totalPrice}₫</span></p>
+              <p className='flex flex-row justify-start items-start'>Tổng
+              <span className='text-[24px] ml-[330px] mt-[-8px] max-w-[145.79px] absolute'>
+                {/** className='text-[24px] ml-[330px] mt-[-8px] max-w-[145.79px] absolute'>{totalPrice}₫ */}
+                {totalPrice.toLocaleString("vi-VN", { maximumFractionDigits: 0, useGrouping: true }).replace(/\./g, ',')}đ
+              </span>
+              </p>
                 <div className='flex flex-col'>
                 <div className='flex flex-row ml-[-30px] mt-[40px]'>
                 <a href='/'>
@@ -408,7 +413,8 @@ function App() {
               </div>
               <div className='flex flex-col text-[20px] ml-[40px] items-center'>
                   {/* <p>Giá</p> */}
-                  <p>{item.price}₫</p>
+                  {/* <p>{item.price}₫</p> */}
+                  <p>{item.price.toLocaleString("vi-VN", { maximumFractionDigits: 0, useGrouping: true }).replace(/\./g, ',')}đ</p>
               </div>
               <div className='flex flex-col ml-[88px] items-center'>
                   {/* <p>Số lượng</p> */}
@@ -421,7 +427,8 @@ function App() {
                 </div>
                 <div className='flex flex-col ml-[75px] max-w-[150.55px] items-center text-[20px]'>
                 {/* <p>Tổng</p> */}
-                <p className='w-[99.25px] max-w-[150.55px]'>{item.totalprice}₫</p>
+                {/* <p className='w-[99.25px] max-w-[150.55px]'>{item.totalprice}₫</p> */}
+                <p>{item.totalprice.toLocaleString("vi-VN", { maximumFractionDigits: 0, useGrouping: true }).replace(/\./g, ',')}đ</p>
                 </div>
                     <div className='flex flex-col items-center text-center ml-[65px] mt-[8px]'>
                     {/* <p>Xóa</p> */}
@@ -432,12 +439,12 @@ function App() {
                 </div>
               ))}
               
-              <button
+              {/**<button
                 className="bg-red-500 text-white font-bold py-2 px-4 rounded mt-4"
                 onClick={clearCart}
               >
                 Xóa tất cả
-              </button>
+              </button> */}
             </div>
           ) : (
             <div className='flex flex-col items-center justify-center mt-[20px]'>

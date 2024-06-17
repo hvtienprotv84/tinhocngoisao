@@ -101,7 +101,7 @@ function ProductSlider() {
               onMouseEnter={() => handleMouseEnter(product.id)}
               onMouseLeave={handleMouseLeave}
             >
-              <div className=' max-h-[450px] relative ml-[2px]'>
+              <div className=' max-h-[500px] relative ml-[2px]'>
               <a href={`/product${product.id}`}>
                 <img src={product.image} alt={product.name} className="w-full h-full max-w-[226.66px] max-h-[280px] object-cover pt-[35px] pb-[20px]" />
                 <h2 className="text-[14px] text-center font-arial w-[227px] h-[50px]">{product.name}</h2>
@@ -109,9 +109,10 @@ function ProductSlider() {
                   <p className="text-[14px] font-arial text-red-600 ">{product.price}</p><span className="text-[14px] font-arial italic pl-[10px]"> <s>{product.priceold}</s></span>
                 </div>
                 </a>
-                {hoveredProduct === product.id && (
-              <div className="flex justify-center absolute bottom-0 left-0 w-full ">
-                <div className="w-full flex flex-col justify-center mt-[-450px] ml-[200px]">
+              </div>  
+              {hoveredProduct === product.id && (
+              <div className="flex justify-center absolute mt-[-340px] ">
+                <div className="flex flex-col justify-center ml-[195px]">
                   <div className="mr-2 cursor-pointer bg-[#000000b3] rounded-full p-2 w-[30px] flex justify-center items-center">
                     <FontAwesomeIcon  className='flex justify-center text-white' icon={faCompress}/>
                   </div>
@@ -130,8 +131,6 @@ function ProductSlider() {
                 </div>
               </div>
               )}
-
-              </div>
             </div>
           ))}
       </div>
