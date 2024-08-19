@@ -33,6 +33,9 @@ import Footer from './component/Footer';
 import Cart from './pages/Cart';
 import FooterMobile from './component/Footer_Mobile';
 import ProductTest from './component/ProductTest';
+import Cart2 from './component/Cart';
+import CartFull from './component/CartFull';
+import LoginSignUpFull from './component/Login_SignUp_Full';
 
 
 
@@ -97,7 +100,7 @@ root.render(
           <div className='relative mt-[655px]'>
           <CameraWebcam/>
           </div>
-          <div className='absolute mt-[595px]'>
+          <div className='absolute mt-[605px]'>
           <Clock/>
           </div>
           <div className='absolute mt-[595px]'>
@@ -106,7 +109,7 @@ root.render(
           <div className='absolute ml-[15px] mt-[320px]'>
           <ProductSlider/>
           </div>
-          <div className='fixed z-50 ml-[15px] mt-[2090px] hidden sm:inline-block'>
+          <div className='fixed z-[9999] ml-[15px] mt-[2090px] hidden sm:inline-block'>
           <Icon/>
           </div>
           <div className='absolute mt-[290px] sm:hidden'>
@@ -118,7 +121,10 @@ root.render(
           <div className='absolute mt-[1400px] hidden sm:inline-block'>
             <ProductTest/>
             </div>
-          <div className='absolute mt-[2500px] hidden sm:inline-block'>
+            <div className='absolute z-50 mt-[1600px] ml-[100px] hidden sm:inline-block'>
+            <Cart2/>
+            </div>
+          <div className='absolute z-50 mt-[2550px] hidden sm:inline-block'>
             <Footer/>
             </div>
             </>
@@ -148,6 +154,26 @@ root.render(
             <div><CPU_14 /></div>
             <div className='ml-[10px]'><Icon/></div>
             
+            </div>
+          } />
+
+          <Route path="/cart" element={
+            <div className='absolute'>
+             <CartFull />
+            </div>
+          } />
+
+          <Route path="/account/login" element={
+            <div>
+            <App />
+            <Menu2/>
+            <LoginSignUpFull/>
+            <div className='ml-[-25px] mt-[25px]'>
+            <Footer/>
+            </div>
+            <div className='z-50'>
+            <Icon/>
+            </div>
             </div>
           } />
 
