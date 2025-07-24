@@ -8,18 +8,18 @@ function ProductSlider() {
   const [hoveredProduct, setHoveredProduct] = useState(null);
 
   const products = [
-    { id: 1, name: 'Combo phím chuột giả cơ G21 chuyên game | Trắng - Đen, Led...', price: '7?,000₫' , priceold: '99,000₫' , image: 'https://product.hstatic.net/200000420363/product/mini_1030-02_253d32e93f1c4cf0b3ccde8d600523bc_large.png' },
-    { id: 2, name: 'Chuột HP Wireless Z3700 (Bạc)', price: '?9,000₫' , priceold: '159,000₫' , image: 'https://product.hstatic.net/200000420363/product/mini_1650-02_b2d0df960db949fe85eb105bde0e1ef3_large.png' },
-    { id: 3, name: 'Tản nhiệt CPU Coolmoon AS-600 Black RGB Sync All Main (Suppor...', price: '3?9,000₫' , priceold: '429,000₫' , image: 'https://product.hstatic.net/200000420363/product/chicken_plus-02_4f7402696e0c4fbcafea2f071c24b1c7_large.png' },
-    { id: 4, name: 'Bàn phím cơ Gaming Newmen GM328 - Grey White | Blue Switch', price: '4?9,000₫' , priceold: '549,000₫' , image: 'https://product.hstatic.net/200000420363/product/frame_pc_3-02_7729ad605bd343a3a20a1110e41235d0_large.png' },
-    { id: 5, name: 'Ghế công thái học Ergonomic TMS06 | Trắng', price: '1,?99,000₫' , priceold: '1,249,000₫' , image: 'https://product.hstatic.net/200000420363/product/assassin-02_2fe17ad6a23b4e3a9fafb77794ffe9d0_large.png' },
-    { id: 6, name: 'Màn hình LCD 24 inch LG 24MP500-B FHD IPS FHD 75Hz...', price: '2,?90,000₫' , priceold: '2,290,000₫' , image: 'https://product.hstatic.net/200000420363/product/super_luce-02_7f1c907662ed4f4db5428bf31d3e90f7_large.png' },
-    { id: 7, name: 'Chuột không dây Fuhlen M06s - Đen | Wireless 2.4G', price: '9?,000₫' , priceold: '129,000₫' , image: 'https://product.hstatic.net/200000420363/product/1660s_wh-02_4ecf18884a4445009e5a1fa8173be2ad_large.jpg' },
-    { id: 8, name: 'Tai nghe Gaming Dare-U EH406 | Đen, Multi Led', price: '?29,000₫' , priceold: '299,000₫' , image: 'https://product.hstatic.net/200000420363/product/azir-02_7cb954a95c304e21a254ca9c62f4462f_large.png' },
-    { id: 9, name: 'Chuột Gaming Fuhlen G90 ProX Green', price: '3?9,000₫' , priceold: '499,000₫' , image: 'https://product.hstatic.net/200000420363/product/aether-02_bf00beeed89d4c4a9f103ecf094af455_large.png' },
-    { id: 10, name: 'Giá treo màn hình AOC AM400S - Silver | 17 - 34 inch', price: '7?9,000₫' , priceold: '829,000₫' , image: 'https://product.hstatic.net/200000420363/product/magic-02_288152086f814888b91132a3ae790f20_large.png' },
-    { id: 11, name: 'Màn hình VSP IP2510W1 | 24.5 inch, Full HD, IPS, 100Hz, 5ms,...', price: '1,?70,000₫' , priceold: '1,890,000₫' , image: 'https://product.hstatic.net/200000420363/product/horserm4n-02_7deb6f1fbf4540cc89d7c2bd072eb527_large.png' },
-    { id: 12, name: 'Mainboard ASRock X570S PG Riptide', price: '3,?90,000₫' , priceold: '3,690,000₫' , image: 'https://product.hstatic.net/200000420363/product/zero-02_6fc23805fb524276b26874a34ccd8b30_large.png' },
+    { id: 1, name: 'Combo phím chuột giả cơ G21 chuyên game | Trắng - Đen, Led...', price: '7?,000₫' , priceold: '99,000₫' , image: '//product.hstatic.net/200000420363/product/corsair-hs35-v2-carbon_3b5d9f7d0a1c487c8ebbc60ef37e6d3c_large.png' },
+    { id: 2, name: 'Chuột HP Wireless Z3700 (Bạc)', price: '?9,000₫' , priceold: '159,000₫' , image: '//product.hstatic.net/200000420363/product/tinhocngoisao.com1__4__def30fc9018d4a63b00380bf4565a375_large.jpg' },
+    { id: 3, name: 'Tản nhiệt CPU Coolmoon AS-600 Black RGB Sync All Main (Suppor...', price: '3?9,000₫' , priceold: '429,000₫' , image: '//product.hstatic.net/200000420363/product/tinhocngoisao.com1__10__c32012ea235b4440be9db2542c95fada_large.jpg' },
+    { id: 4, name: 'Bàn phím cơ Gaming Newmen GM328 - Grey White | Blue Switch', price: '4?9,000₫' , priceold: '549,000₫' , image: '//product.hstatic.net/200000420363/product/ngoi-sao01_e9f36fe51bce46938e5870c3d14eabda_large.png' },
+    { id: 5, name: 'Ghế công thái học Ergonomic TMS06 | Trắng', price: '1,?99,000₫' , priceold: '1,249,000₫' , image: '//product.hstatic.net/200000420363/product/ss.480.wd_.480g3g0a_30290198082a437bb08382ba59e65fa1_large.jpg' },
+    { id: 6, name: 'Màn hình LCD 24 inch LG 24MP500-B FHD IPS FHD 75Hz...', price: '2,?90,000₫' , priceold: '2,290,000₫' , image: '//product.hstatic.net/200000420363/product/tinhocngoisao.com1__14__e9256a49f0614be2a5d26f6635543c66_large.jpg' },
+    { id: 7, name: 'Chuột không dây Fuhlen M06s - Đen | Wireless 2.4G', price: '9?,000₫' , priceold: '129,000₫' , image: '//product.hstatic.net/200000420363/product/tinhocngoisao.com1__14__e9256a49f0614be2a5d26f6635543c66_large.jpg' },
+    { id: 8, name: 'Tai nghe Gaming Dare-U EH406 | Đen, Multi Led', price: '?29,000₫' , priceold: '299,000₫' , image: '//product.hstatic.net/200000420363/product/ml-360l-core-argb-gallery-1-zoom_73a38f0e5b1c4e8087dc819ae19f1082_large.jpg' },
+    { id: 9, name: 'Chuột Gaming Fuhlen G90 ProX Green', price: '3?9,000₫' , priceold: '499,000₫' , image: '//product.hstatic.net/200000420363/product/vga-zotac-gaming-rtx-3060-twin-edge-12gb-ddr6-ver-2-zt-a30600e-10m_5351c2e9f1094679a514c9f7fecab408_large.jpg' },
+    { id: 10, name: 'Giá treo màn hình AOC AM400S - Silver | 17 - 34 inch', price: '7?9,000₫' , priceold: '829,000₫' , image: '//product.hstatic.net/200000420363/product/_2023_-khung-sp-_1__4798e8049b57495e9043673631fbfc49_large.jpg' },
+    { id: 11, name: 'Màn hình VSP IP2510W1 | 24.5 inch, Full HD, IPS, 100Hz, 5ms,...', price: '1,?70,000₫' , priceold: '1,890,000₫' , image: '//product.hstatic.net/200000420363/product/cpu-intel-core-i7-14700k-chinh-hang_c661168e8ece48ffbf576a050756acc9_large.jpg' },
+    { id: 12, name: 'Mainboard ASRock X570S PG Riptide', price: '3,?90,000₫' , priceold: '3,690,000₫' , image: '//product.hstatic.net/200000420363/product/_2023_-khung-sp-_1__4c5353914dfb4f9faa641f238a0737ac_large.jpg' },
   ];
 
   const handlePrev = () => {
